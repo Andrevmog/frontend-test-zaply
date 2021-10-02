@@ -13,8 +13,8 @@ function random(req, res) {
     let n = req.params.n
     let list = []
     for (let i = 0; i < n; i++) {
-        let r = Math.floor(Math.random() * db.length)
-        list.push(db[i])
+        var r = Math.floor(Math.random() * db.length)
+        list.push(db[r])
     }
     res.send(list)
 }
