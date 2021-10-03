@@ -1,8 +1,26 @@
-# Frontend test
+## Como usar
 
-We have a simple API that returns a JSON array. We would like you to use HTML, CSS and Javascript to read the API and display it in an organized way. In addition, you should add in some sort of sorting and filtering mechanic to the front-end. Feel free to use any frameworks you would like to achieve the task.
+Criei uma plataforma de visualização dos produtos
 
 ## API
 
-* */* returns all data;
-* */random/<n>* returns a random subset of the data. Use this if you need a smaller dataset;
+* Fiz um banco de dados simples transformando CSV em JSON e retornando pela API
+* Usei ReactJS
+* */* returna tudo;
+* */random/<n>* retorna n* produtos randomicos;
+
+## Tecnologias
+
+* CSS3
+* Html
+* JavaScript
+* JQuery
+* React
+* Ajax
+
+## Porquê de ter usado essas tecnologias
+
+* Usei mais o JS nativo para mostrar meu conhecimento sem o uso de frameworks
+* JQuery usei como encurtamento de código, para ficar mais organizado (ajax,require)
+* React para fazer uma API básica
+* Como não tinha um exemplo de UX eu forcei bastante o CSS
