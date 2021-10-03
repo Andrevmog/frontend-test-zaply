@@ -60,6 +60,7 @@
     font-family: Comic Sans MS;
     font-size: 26px;
     color: black;
+    background-color: #fff;
     outline: none;
     transition: .5s;
 }
