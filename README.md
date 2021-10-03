@@ -17,6 +17,8 @@ Criei uma plataforma de visualização dos produtos
 * JQuery
 * React
 * Ajax
+* Axios
+* VUEjs
 
 ## Porquê de ter usado essas tecnologias
 
@@ -24,3 +26,4 @@ Criei uma plataforma de visualização dos produtos
 * JQuery usei como encurtamento de código, para ficar mais organizado (ajax,require)
 * React para fazer uma API básica
 * Como não tinha um exemplo de UX eu forcei bastante o CSS
+* Usei VueJS para a pesquisa

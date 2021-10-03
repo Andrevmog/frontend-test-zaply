@@ -1,5 +1,5 @@
-var response;
 var category;
+
 $(document).ready(function() {
 
 
@@ -28,6 +28,8 @@ $(document).ready(function() {
         })
     }
 
+
+
     function random() {
         $(function() {
 
@@ -42,7 +44,6 @@ $(document).ready(function() {
 
         })
     }
-
 
 
 })
@@ -72,7 +73,6 @@ function recomendados(data) {
                 </div>
             </article>`);
     }
-
 
 }
 
@@ -105,8 +105,6 @@ function card(data, c) {
 
     }
 
-
-
 }
 
 
@@ -116,3 +114,40 @@ let sidebar = document.getElementById('navSidebar');
 navbarOpener = function() {
     sidebar.classList.toggle("active");
 }
+
+
+
+new Vue({
+    el: '#app',
+    data() {
+        return {
+            searchQuery: null,
+            data: []
+        };
+    },
+    methods: {
+        async getData() {
+            await axios.get(`http://localhost:3000/`)
+                .then((response) => {
+                    this.data = response.data
+                    console.log(this.data)
+                })
+                .catch((error) => {
+                    console.log(error)
+                })
+        }
+    },
+    computed: {
+        resultQuery() {
+            if (this.searchQuery) {
+                return this.data.filter((item) => {
+                    return this.searchQuery.toLowerCase().split(' ').every(v => item.name.toLowerCase().includes(v))
+                })
+            } else {
+                return this.data;
+            }
+        }
+    }
+
+
+})

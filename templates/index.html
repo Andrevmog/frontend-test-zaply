@@ -12,6 +12,8 @@
     <!--Fonts and Icons-->
     <script src="https://code.jquery.com/jquery-3.6.0.js " integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin=" anonymous "></script>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <meta name="viewport " content="width=device-width, initial-scale=1.0 ">
 </head>
 
@@ -29,9 +31,32 @@
                 </div>
             </div>
 
-            <div class="promocoes">
-                <span class="promo">Confira nossas promoções</span>
-                <main class="mainIndex bd-grid">
+            <div id="app">
+                <div style="margin:1rem auto;padding: 1rem;">
+                    <h1 style="text-align: center;margin-bottom: 50px;">Procurar Produto</h1>
+                    <form @submit.prevent="getData">
+                        <div class="box">
+                            <form name="search">
+                                <input class="input" type="text" v-model="searchQuery" name="txt" onmouseout="document.search.txt.value = ''">
+                            </form>
+                            <i class="fas fa-search"></i>
+                        </div>
+                    </form>
+                    <div class="table-responsive" style="margin-top:100px" v-if="searchQuery !== '' ">
+                        <table v-if="data.length " class="table ">
+                            <tbody>
+                                <tr v-for="item in resultQuery ">
+                                    <td><a v-bind:href="item.uri " target="_blank ">{{item.name}}</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="promocoes ">
+                <span class="promo ">Confira nossas promoções</span>
+                <main class="mainIndex bd-grid ">
 
                 </main>
             </div>
@@ -45,9 +70,9 @@
 
     <!--Main Body End-->
     <!--JS Scripts Start-->
-    <script src="../js/script.js"></script>
+    <script src="../js/script.js "></script>
     <script>
-        category = "limpeza";
+        category = "limpeza ";
     </script>
 
 
