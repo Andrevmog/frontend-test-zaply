@@ -5,7 +5,7 @@ Criei uma plataforma de visualização dos produtos
 ## API
 
 * Fiz um banco de dados simples transformando CSV em JSON e retornando pela API
-* Usei ReactJS
+* Usei Node.js
 * */* returna tudo;
 * */random/<n>* retorna n* produtos randomicos;
 
@@ -15,7 +15,7 @@ Criei uma plataforma de visualização dos produtos
 * Html
 * JavaScript
 * JQuery
-* React
+* Node.js
 * Ajax
 * Axios
 * VUEjs
