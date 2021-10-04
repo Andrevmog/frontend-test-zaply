@@ -24,6 +24,6 @@ Criei uma plataforma de visualização dos produtos
 
 * Usei mais o JS nativo para mostrar meu conhecimento sem o uso de frameworks
 * JQuery usei como encurtamento de código, para ficar mais organizado (ajax,require)
-* React para fazer uma API básica
+* Node.js para fazer uma API básica
 * Como não tinha um exemplo de UX eu forcei bastante o CSS
 * Usei VueJS para a pesquisa
